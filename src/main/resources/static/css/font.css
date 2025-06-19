@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'GimhaeGaya';
+    src: url('/fonts/GimhaeGaya.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('/fonts/Pretendard.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
