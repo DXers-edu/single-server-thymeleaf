@@ -54,6 +54,25 @@ spring.datasource.password=StrongP!ssw0rd
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 ```
+  
+`/etc/systemd/system/single-server.service` 파일
+
+```plaintext
+[Unit]
+Description=Single Server Application
+After=network.target
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/single-server
+ExecStart=/usr/bin/java -jar /opt/single-server/app.jar
+SuccessExitStatus=143
+Restart=on-failure
+RestartSec=10
+StandardOutput=file:/opt/single-server/logs/app.log
+StandardError=file:/opt/single-server/logs/app-error.log
+[Install]
+WantedBy=multi-user.target
+```
 
 ---
 
